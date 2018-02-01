@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.objectsWithNameArray = [[NSMutableArray alloc] init];
+    
     NSURL *url = [NSURL URLWithString:@"https://api.github.com/users/lighthouse-labs/repos"];
     
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
@@ -79,7 +81,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return self.repos.count;
+    return self.objectsWithNameArray.count;
 }
 
 
